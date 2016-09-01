@@ -121,7 +121,9 @@
         event.target.value = getValue(event);
 
         // Trigger input event
-        _triggerEvent(event.target, (event.type === settings.events.end ? 'change' : 'input'));
+        _triggerEvent(event.target, (event.type === settings.events.end ? 'change' : 'input'), {
+            bubbles: true
+        });
     }
 
     // Event listeners
